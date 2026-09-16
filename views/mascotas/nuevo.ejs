@@ -1,0 +1,60 @@
+<section class="panel-formulario">
+
+    <p class="etiqueta">NUEVO INGRESO</p>
+
+    <h1><%= titulo %></h1>
+
+    <% if (error) { %>
+
+        <p class="error" role="alert"><%= error %></p>
+
+    <% } %>
+
+    <form action="/mascotas" method="post" class="formulario">
+
+        <label for="nombre">Nombre</label>
+        <input
+            id="nombre"
+            name="nombre"
+            value="<%= valores.nombre ?? '' %>"
+            required
+        >
+
+        <label for="especie">Especie</label>
+        <input
+            id="especie"
+            name="especie"
+            value="<%= valores.especie ?? '' %>"
+            required
+        >
+
+        <label for="edad">Edad</label>
+        <input
+            id="edad"
+            name="edad"
+            type="number"
+            value="<%= valores.edad ?? '' %>"
+            required
+        >
+
+        <label for="descripcion">Descripción</label>
+        <textarea
+            id="descripcion"
+            name="descripcion"
+            rows="5"
+            required
+        ><%= valores.descripcion ?? '' %></textarea>
+
+        <label for="estado">Estado</label>
+        <input
+            id="estado"
+            name="estado"
+            value="<%= valores.estado ?? '' %>"
+            required
+        >
+        
+        <button type="submit">Guardar mascota</button>
+
+    </form>
+
+</section>

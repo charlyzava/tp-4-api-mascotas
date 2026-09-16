@@ -1,0 +1,29 @@
+[
+ {
+ "id": 1,
+ "nombre": "Rintintin",
+ "especie": "Perro",
+ "edad": 8,
+ "descripcion": "Perrito sin raza",
+ "estado": "Adoptado",
+ "imagen": "/img/1.png"
+ },
+ {
+ "id": 2,
+ "nombre": "Pipo",
+ "especie": "Perro",
+ "edad": 13,
+ "descripcion": "Perrito cruza entre caniche y desconocido",
+ "estado": "Adoptado",
+ "imagen": "/img/2.png"
+ },
+ {
+ "id": 3,
+ "nombre": "Seuz",
+ "especie": "Perro",
+ "edad": 11,
+ "descripcion": "Perrito cruza entre caniche y Siberiano",
+ "estado": "Adoptado",
+ "imagen": "/img/3.png"
+ }
+]
