@@ -2,59 +2,47 @@
 
     <p class="etiqueta">NUEVO INGRESO</p>
 
-    <h1><%= titulo %></h1>
+    <h1>
+        <%= titulo %>
+    </h1>
 
     <% if (error) { %>
 
-        <p class="error" role="alert"><%= error %></p>
+        <p class="error" role="alert">
+            <%= error %>
+        </p>
 
-    <% } %>
+        <% } %>
 
-    <form action="/mascotas" method="post" class="formulario">
+            <form action="/mascotas" method="post" class="formulario">
 
-        <label for="nombre">Nombre</label>
-        <input
-            id="nombre"
-            name="nombre"
-            value="<%= valores.nombre ?? '' %>"
-            required
-        >
+                <label for="nombre">Nombre</label>
+                <input id="nombre" name="nombre" value="<%= valores.nombre ?? '' %>" required>
 
-        <label for="especie">Especie</label>
-        <input
-            id="especie"
-            name="especie"
-            value="<%= valores.especie ?? '' %>"
-            required
-        >
+                <label for="especie">Especie</label>
+                <input id="especie" name="especie" value="<%= valores.especie ?? '' %>" required>
 
-        <label for="edad">Edad</label>
-        <input
-            id="edad"
-            name="edad"
-            type="number"
-            value="<%= valores.edad ?? '' %>"
-            required
-        >
+                <label for="edad">Edad</label>
+                <input id="edad" name="edad" type="number" value="<%= valores.edad ?? '' %>" required>
 
-        <label for="descripcion">Descripción</label>
-        <textarea
-            id="descripcion"
-            name="descripcion"
-            rows="5"
-            required
-        ><%= valores.descripcion ?? '' %></textarea>
+                <label for="descripcion">Descripción</label>
+                <textarea id="descripcion" name="descripcion" rows="5"
+                    required><%= valores.descripcion ?? '' %></textarea>
 
-        <label for="estado">Estado</label>
-        <input
-            id="estado"
-            name="estado"
-            value="<%= valores.estado ?? '' %>"
-            required
-        >
-        
-        <button type="submit">Guardar mascota</button>
+                <label for="estado">Estado</label>
 
-    </form>
+                <select id="estado" name="estado" required>
+                    <option value="">Seleccione un estado</option>
+                    <option value="Para adopción">Para adopción</option>
+                    <option value="Para venta">Para venta</option>
+                    <option value="Adoptado">Adoptado</option>
+                    <option value="Vendido">Vendido</option>
+                    <option value="Fallecido">Fallecido</option>
+                    <option value="Perdido">Perdido</option>
+                </select>
+
+                <button type="submit">Guardar mascota</button>
+
+            </form>
 
 </section>

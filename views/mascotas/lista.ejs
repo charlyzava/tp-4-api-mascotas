@@ -17,6 +17,7 @@
         <p class="edad">Edad: <%= mascota.edad.toLocaleString("es-AR") %></p>
         <p class="descripcion">Descripción: <%= mascota.descripcion.toLocaleString("es-AR") %></p>
         <a href="/mascotas/<%= mascota.id %>">Ver detalle</a>
+        <p><%= mascota.estado %></p>
     </article>
     <% }) %>
  </section>
